@@ -15,7 +15,7 @@ function getdata(){
     var weather =axios(`https://api.openweathermap.org/data/2.5/weather?q=${enteredvalue}&appid=ee949cc184264765ad2f53c854eb1a81`);
 
     weather.then(function(dalta){
-  setdeg(dalta.data.main.temp);
+  setdeg(dalta.data.wind.deg);
        setcity(dalta.data.name);
        setdesc(dalta.data.weather[0].main);
 
@@ -32,7 +32,7 @@ function getdata(){
                 <br></br>
                 <button onClick={getdata}className="bg-black text-white rounded-lg p-1 text-xs mt-2">Get Report ⚡</button>
 
-                <p className="text-xs mt-2">Degree: {deg} | City: {city} | Weather: {desc}</p>
+                <p className="text-xs mt-2">Degree: {(deg-32)*5/9} | City: {city} | Weather: {desc}</p>
             </div>
 
         </div>
