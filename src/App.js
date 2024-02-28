@@ -32,7 +32,7 @@ function getdata(){
                 <br></br>
                 <button onClick={getdata}className="bg-black text-white rounded-lg p-1 text-xs mt-2">Get Report ⚡</button>
 
-                <p className="text-xs mt-2">Degree: {(deg-32)*5/9} | City: {city} | Weather: {desc}</p>
+                <p className="text-xs mt-2">Degree: {deg} | City: {city} | Weather: {desc}</p>
             </div>
 
         </div>
