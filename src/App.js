@@ -15,9 +15,9 @@ function getdata(){
     var weather =axios(`https://api.openweathermap.org/data/2.5/weather?q=${enteredvalue}&appid=ee949cc184264765ad2f53c854eb1a81`);
 
     weather.then(function(dalta){
-       setdeg(dalta.data.main.temp);
-       setcity(dalta.data.weather[0].main);
-       setdesc(dalta.data.name);
+  setdeg(dalta.data.main.temp);
+       setcity(dalta.data.name);
+       setdesc(dalta.data.weather[0].main);
 
     })
 }
